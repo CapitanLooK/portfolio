@@ -1,0 +1,48 @@
+@import '../../utils/styles/theme.scss';
+@import '../../utils/styles/flex.scss';
+
+.about-container{
+    background: $colorBlack;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: first baseline;
+    flex-wrap: wrap;
+    padding: 7.7rem 5rem 10rem 5rem;
+    
+}
+
+.about-content-img{
+    display: flex;
+    padding-bottom: 10rem;
+    img{
+        border-radius: 0.5rem;
+        width: 80%;
+        height: 80%;
+    }
+}
+
+.about-content-text{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+
+    h1{
+        padding-bottom: 9rem;
+        text-align: center;
+        color: $colorGray;
+        text-transform: uppercase;
+        font-size: 4rem;
+    }
+
+    p{
+        margin-bottom: 7rem;
+        color: $colorWhite;
+        font-size: 2.1rem;
+        line-height: 4rem;
+    }
+    
+}
+

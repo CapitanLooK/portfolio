@@ -1,0 +1,19 @@
+@import '../../utils/styles/theme.scss';
+@import '../../utils/styles/flex.scss';
+
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    margin-bottom: 10rem;
+    h3{
+        color: $colorWhite;
+        font-size: 4rem;
+        text-transform: capitalize;
+    }
+    p{
+        color: $colorWhite;
+        font-size: 2.1rem;
+    }
+}

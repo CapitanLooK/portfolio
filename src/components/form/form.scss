@@ -1,0 +1,37 @@
+@import '../../utils/styles/flex.scss';
+@import '../../utils//styles/theme.scss';
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    h4{
+        color: $colorWhite;
+        font-size: 4rem;
+        text-transform: capitalize;
+    }
+    p{
+        color: $colorWhite;
+        font-size: 2.1rem;
+        margin-bottom: 5rem;
+    }
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    input, textarea{
+        margin-bottom: 4rem;
+        padding: 1.5rem;
+        background-color: transparent;
+        border: 3px solid $colorGray;
+        border-radius: 0.5rem;
+        color: $colorWhite;
+    }
+    input[type=submit]{
+        background-color: $colorGreen;
+        font-size: 1.5rem;
+        color: $colorBlack;
+    }
+}

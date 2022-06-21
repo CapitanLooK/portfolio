@@ -1,0 +1,8 @@
+@import '../../utils/styles/theme.scss';
+@import '../../utils/styles/flex.scss';
+
+.container{
+    background-color: $colorBlack;
+    padding: 7.7rem 5rem 10rem 5rem;
+    height: 100%;
+}

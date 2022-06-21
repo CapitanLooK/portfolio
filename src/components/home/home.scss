@@ -1,0 +1,51 @@
+@import '../../utils/styles/theme.scss';
+
+.home-background{
+    background-image: url(../../assets/bgPhoto.png);
+    background-position: 100%;
+    background-color: $colorBlack;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.home-content{
+    padding: 16rem 3rem;
+    h1{
+        font-size: 3.8rem;
+        font-weight: 400;
+        letter-spacing: 0.3rem;
+        color: $colorGray;
+        text-transform: uppercase;
+        padding-left: 2rem;
+    }
+    h2{
+        font-size: 5.5rem;
+        line-height: 5.5rem;
+        font-weight: 800;
+        color: $colorWhite;
+        padding-top: 4rem;
+        padding-left: 2rem;
+    }
+
+    h3{
+        font-size: 5rem;
+        font-weight: 800;
+        line-height: 4rem;
+        color: $colorGreen;
+        padding-top: 4rem;
+        padding-left: 2rem;
+        animation: flicker 1.5s infinite alternate;
+        font-family: 'Cyberpunk';
+    }
+    
+    h4{
+        font-size: 5.5rem;
+        font-weight: 800;
+        line-height: 4rem;
+        text-transform: capitalize;
+        color: $colorWhite;
+        padding-top: 4rem;
+        padding-left: 2rem;
+    }
+}

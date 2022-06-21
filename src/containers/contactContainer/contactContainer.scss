@@ -1,0 +1,16 @@
+@import '../../utils/styles/theme.scss';
+@import '../../utils/styles/flex.scss';
+
+.container{
+    display: flex;
+    flex-direction: row;
+    h4{
+        color: $colorWhite;
+        font-size: 4rem;
+        text-transform: capitalize;
+    }
+    p{
+        color: $colorWhite;
+        font-size: 2.1rem;
+    }
+}
