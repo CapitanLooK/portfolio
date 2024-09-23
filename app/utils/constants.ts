@@ -127,6 +127,11 @@ export const experience: IExperience = {
     description: '',
     items: [
         {
+            company: "Oppers Global",
+            position: "Software Engineer",
+            duration: "2024 - Presente",
+        },
+        {
             company: "MercadoLibre SA",
             position: "Software Engineer",
             duration: "2022 - 2024",
