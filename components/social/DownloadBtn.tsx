@@ -4,16 +4,16 @@ import Link from 'next/link'
 
 function DownloadBtn() {
   return (
-    <Link href='/CvAlejandroMaure.pdf' download target="_blank" rel="noopener noreferrer" locale={false}>
-    <Button
-      variant="outline"
-      size="lg"
-      className="uppercase flex items-center gap-2"
-    >
-      <span>Descarga mi CV</span>
-      <FiDownload className="text-xl" />
-    </Button>
-</Link>
+    <Link href='/pdf/CvAlejandroMaure.pdf' download target="_blank" rel="noopener noreferrer" locale={false}>
+      <Button
+        variant="outline"
+        size="lg"
+        className="uppercase flex items-center gap-2"
+      >
+        <span>Descarga mi CV</span>
+        <FiDownload className="text-xl" />
+      </Button>
+    </Link>
   )
 }
 

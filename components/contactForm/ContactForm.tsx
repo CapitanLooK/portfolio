@@ -44,7 +44,7 @@ function ContactForm() {
     <div className="xl:w-[54%] order-2 xl:order-none">
       <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl" onSubmit={handleSubmit}>
         <h3 className="text-4xl text-accent capitalize">trabajemos juntos</h3>
-        <p className="text-white/60">Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro, iste quae, totam distinctio dolorem, voluptatem veritatis possimus aut praesentium iure dolores enim magni quisquam natus fugiat aliquam adipisci. Dolore, similique.</p>
+        <p className="text-white/60">Completa el formulario y respondere a la brevedad.</p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Input
             type="name"

@@ -10,15 +10,15 @@ import {
     SiDatadog,
     SiNewrelic,
     SiNginx
-  } from "react-icons/si";
-  import {
+} from "react-icons/si";
+import {
     FaGithub,
     FaLinkedinIn,
     FaReact,
     FaNodeJs,
     FaSass,
     FaEnvelope
-  } from "react-icons/fa";
+} from "react-icons/fa";
 
 export const links: ILinks[] = [
     {
@@ -60,14 +60,14 @@ export const LIURL: string = 'https://www.linkedin.com/in/alejandrodanielmaure'
 
 export const socials: ISocials[] = [
     {
-      icon: FaGithub,
-      path: GHURL
+        icon: FaGithub,
+        path: GHURL
     },
     {
-      icon: FaLinkedinIn,
-      path: LIURL
+        icon: FaLinkedinIn,
+        path: LIURL
     }
-  ]
+]
 
 export const services: IServices[] = [
     {
@@ -99,32 +99,32 @@ export const services: IServices[] = [
 export const ResumeTabs: IResumeTabs[] = [
     {
         value: 'experience',
-        text: 'experiencia'
+        text: 'Experiencia'
     },
     {
         value: 'education',
-        text: 'educación'
+        text: 'Educación'
     },
     {
         value: 'skills',
-        text: 'tecnologias'
+        text: 'Tecnologias'
     },
     {
         value: 'about',
-        text: 'sobre mi'
+        text: 'Sobre Mi'
     }
 ]
 
 export const aboutMe: IAboutMe = {
-    title: "About Me",
-    description: "Soy desarrollador de software con 2 años de experiencia. Me especializo en el desarrollo de aplicaciones web y móviles con diferentes tecnologías.",
+    title: "Sobre Mi",
+    description: "Soy desarrollador de software con mas de 2 años de experiencia. Me especializo en el desarrollo de aplicaciones web y móviles con diferentes tecnologías.",
 }
 
 
 export const experience: IExperience = {
     icon: 'public/assets/badge.svg',
-    title: 'Experience',
-    description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc. Donec',
+    title: 'Experiencia',
+    description: '',
     items: [
         {
             company: "MercadoLibre SA",
@@ -146,8 +146,8 @@ export const experience: IExperience = {
 
 export const education: IEducation = {
     icon: 'public/assets/cap.svg',
-    title: 'Education',
-    description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc. Donec',
+    title: 'Educación',
+    description: '',
     items: [
         {
             institution: "Universidad",
@@ -163,8 +163,8 @@ export const education: IEducation = {
 }
 
 export const skills: ISkills = {
-    title: 'My Skills',
-    description: 'lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc. Donec',
+    title: 'Tecnologias',
+    description: '',
     techAll: [
         {
             icon: SiJavascript,
