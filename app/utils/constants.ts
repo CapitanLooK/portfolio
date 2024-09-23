@@ -159,11 +159,6 @@ export const education: IEducation = {
             careerName: "IRSO",
             duration: "2023-2026",
         },
-        {
-            institution: "CoderHouse",
-            careerName: "Full Stack",
-            duration: "2020 - 2021",
-        },
     ]
 }
 
