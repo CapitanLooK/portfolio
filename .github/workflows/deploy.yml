@@ -20,7 +20,7 @@ jobs:
       - name: Deploy to Server via SSH
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} << EOF
-            cd portfolio
+            cd /home/capitanserver2/webserver/portfolio
             git pull origin main
             docker-compose build
             docker-compose up -d
