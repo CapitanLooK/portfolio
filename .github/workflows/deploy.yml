@@ -8,19 +8,18 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: SSH into server and deploy
-        uses: appleboy/ssh-action@v1.0.0
+      - name: Deploy with SSH
+        uses: webfactory/ssh-deploy@v2
         with:
-          host: ${{ secrets.SERVER_IP }}
+          hosts: ${{ secrets.SERVER_IP }}
           username: ${{ secrets.SERVER_USER }}
-          key: ${{ secrets.SERVER_KEY }}
+          private-key: ${{ secrets.SERVER_KEY }}
           passphrase: ${{ secrets.SERVER_KEY_PASSPHRASE }}
-          script: |
+          remotes: |
             cd portfolio
             git pull origin main
             docker-compose build
