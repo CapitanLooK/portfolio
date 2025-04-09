@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 function DownloadBtn() {
   return (
-    <Link href='/pdf/CvAlejandroMaure.pdf' download target="_blank" rel="noopener noreferrer" locale={false}>
+    <Link href='/pdf/cv-alejandro-maure.pdf' download target="_blank" rel="noopener noreferrer" locale={false}>
       <Button
         variant="outline"
         size="lg"
