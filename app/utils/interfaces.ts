@@ -79,6 +79,10 @@ export interface ISkills {
         icon: React.ComponentType,
         name: string
     }[],
+    techMn: {
+        icon: React.ComponentType,
+        name: string
+    }[]
 }
 
 export interface IProjects {
@@ -97,7 +101,7 @@ export interface IProjects {
 export interface ICarrouselProps {
     projects: Array<{ url: string; github: string }>;
     handleSlideChange: (index: number) => void;
-  }
+}
 
 export interface IContactInfo {
     icon: React.ComponentType;
