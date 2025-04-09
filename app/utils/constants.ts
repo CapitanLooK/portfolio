@@ -9,7 +9,11 @@ import {
     SiTestinglibrary,
     SiDatadog,
     SiNewrelic,
-    SiNginx
+    SiNginx,
+    SiDocker,
+    SiGrafana,
+    SiPrometheus,
+    SiNestjs
 } from "react-icons/si";
 import {
     FaGithub,
@@ -155,9 +159,9 @@ export const education: IEducation = {
     description: '',
     items: [
         {
-            institution: "Universidad",
-            careerName: "IRSO",
-            duration: "2023-2026",
+            institution: "UTN FRH",
+            careerName: "Tec Universitaria en Programación",
+            duration: "2025-2027",
         },
     ]
 }
@@ -173,6 +177,10 @@ export const skills: ISkills = {
         {
             icon: SiTypescript,
             name: 'TypeScript'
+        },
+        {
+            icon: SiDocker,
+            name: 'Docker'
         }
 
     ],
@@ -211,11 +219,18 @@ export const skills: ISkills = {
             icon: SiExpress,
             name: 'Express'
         },
-
+        {
+            icon: SiNestjs,
+            name: 'Nest.js'
+        },
         {
             icon: SiNginx,
             name: 'Nginx'
         },
+
+
+    ],
+    techMn: [
         {
             icon: SiDatadog,
             name: 'Datadog'
@@ -224,9 +239,15 @@ export const skills: ISkills = {
             icon: SiNewrelic,
             name: 'New Relic'
         },
-
-
-    ],
+        {
+            icon: SiGrafana,
+            name: 'Grafana'
+        },
+        {
+            icon: SiPrometheus,
+            name: 'Prometheus'
+        }
+    ]
 }
 
 export const projects: IProjects[] = [
