@@ -44,12 +44,18 @@ function Work() {
               </ul>
               <div className='border border-white/20'></div>
               <div className='flex items-center gap-4'>
-                <Link href={project.url} target='_blank' className='group'>
-                  <TbWorldWww className='text-white text-3xl group-hover:text-accent' />
-                </Link>
-                <Link href={project.github} target='_blank' className='group'>
-                  <FaGithub className='text-white text-3xl group-hover:text-accent' />
-                </Link>
+                {
+                  project.url &&
+                  <Link href={project.url} target='_blank' className='group'>
+                    <TbWorldWww className='text-white text-3xl group-hover:text-accent' />
+                  </Link>
+                }
+                {
+                  project.github &&
+                  <Link href={project.github} target='_blank' className='group'>
+                    <FaGithub className='text-white text-3xl group-hover:text-accent' />
+                  </Link>
+                }
               </div>
             </div>
           </div>

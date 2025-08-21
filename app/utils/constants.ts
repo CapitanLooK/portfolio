@@ -13,7 +13,12 @@ import {
     SiDocker,
     SiGrafana,
     SiPrometheus,
-    SiNestjs
+    SiNestjs,
+    SiSentry,
+    SiKubernetes,
+    SiHarbor,
+    SiHelm,
+    SiLinux,
 } from "react-icons/si";
 import {
     FaGithub,
@@ -21,7 +26,8 @@ import {
     FaReact,
     FaNodeJs,
     FaSass,
-    FaEnvelope
+    FaEnvelope,
+    FaWatchmanMonitoring
 } from "react-icons/fa";
 
 export const links: ILinks[] = [
@@ -121,7 +127,7 @@ export const ResumeTabs: IResumeTabs[] = [
 
 export const aboutMe: IAboutMe = {
     title: "Sobre Mi",
-    description: "Soy desarrollador de software con mas de 2 años de experiencia. Me especializo en el desarrollo de aplicaciones web y móviles con diferentes tecnologías.",
+    description: "Soy desarrollador de software con mas de 3 años de experiencia. Me especializo en el desarrollo de aplicaciones web y móviles con diferentes tecnologías.",
 }
 
 
@@ -143,7 +149,7 @@ export const experience: IExperience = {
         {
             company: "Freelance",
             position: "Desarrollador Web",
-            duration: "2020 - Presente",
+            duration: "2019 - Presente",
         },
         {
             company: "CoderHouse",
@@ -179,8 +185,13 @@ export const skills: ISkills = {
             name: 'TypeScript'
         },
         {
-            icon: SiDocker,
-            name: 'Docker'
+            icon: FaGithub,
+            name: 'GitHub'
+        },
+        {
+            icon: SiLinux,
+            name: 'Linux'
+
         }
 
     ],
@@ -246,6 +257,32 @@ export const skills: ISkills = {
         {
             icon: SiPrometheus,
             name: 'Prometheus'
+        },
+        {
+            icon: SiSentry,
+            name: 'Sentry'
+        },
+        {
+            icon: FaWatchmanMonitoring,
+            name: 'Beszel'
+        },
+    ],
+    techDo: [
+        {
+            icon: SiKubernetes,
+            name: 'Kubernetes'
+        },
+        {
+            icon: SiDocker,
+            name: 'Docker'
+        },
+        {
+            icon: SiHelm,
+            name: 'Helm'
+        },
+        {
+            icon: SiHarbor,
+            name: 'Harbor'
         }
     ]
 }
@@ -253,6 +290,28 @@ export const skills: ISkills = {
 export const projects: IProjects[] = [
     {
         num: "01",
+        category: 'frontend',
+        title: 'Dramatica y alternativa',
+        description: 'Web oficial para una asesora de modas',
+        stack: [
+            {
+                name: 'React.js'
+            },
+            {
+                name: 'Next.js'
+            },
+            {
+                name: 'TailwindCSS'
+            },
+            {
+                name: 'MongoDB'
+            }
+        ],
+        image: '/assets/dramaticapic.png',
+        url: 'https://dramaticayalternativa.com.ar/',
+    },
+    {
+        num: "02",
         category: 'frontend',
         title: 'Oca Tracker',
         description: 'Servicio alternativo para busqueda de paquetes de correo OCA Argentina',
@@ -272,7 +331,7 @@ export const projects: IProjects[] = [
         github: 'https://github.com/CapitanLooK/oca-tracker'
     },
     {
-        num: "02",
+        num: "03",
         category: 'frontend',
         title: 'Portfolio Personal',
         description: 'Portfolio personal para revisar el codigo del proyecto.',
@@ -291,11 +350,10 @@ export const projects: IProjects[] = [
             }
         ],
         image: '/assets/portfolio.png',
-        url: 'https://secta.netlify.app/',
-        github: ''
+        github: 'https://github.com/CapitanLooK/portfolio'
     },
     {
-        num: "03",
+        num: "04",
         category: 'backend',
         title: 'CRUD API REST',
         description: 'CRUD para demostrar el uso de una API REST con Node.js',
@@ -315,7 +373,7 @@ export const projects: IProjects[] = [
         github: 'https://github.com/CapitanLooK/apiNode'
     },
     {
-        num: "04",
+        num: "05",
         category: 'frontend',
         title: 'Secta Cerveceria',
         description: 'Landing page para fabrica de cerveza artesanal',
@@ -332,7 +390,7 @@ export const projects: IProjects[] = [
         github: 'https://github.com/CapitanLooK/Secta'
     },
     {
-        num: "05",
+        num: "06",
         category: 'frontend',
         title: '7 Days to Die APP',
         description: 'APP simple para ver si el dia corresponde a la noche de horda',
