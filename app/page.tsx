@@ -13,7 +13,7 @@ const Home = () => {
               Hola! Soy <br /> <span className="text-accent">Alejandro Maure</span>
             </h1>
             <p className="max-w-[500px] mb-9 text-white/80">
-              Soy desarrollador de software con mas de 2 años de experiencia. Me especializo en el desarrollo de aplicaciones web y móviles con diferentes tecnologías.
+              Soy desarrollador de software con mas de 3 años de experiencia. Me especializo en el desarrollo de aplicaciones web y móviles con diferentes tecnologías.
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <DownloadBtn />

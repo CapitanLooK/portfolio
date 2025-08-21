@@ -82,6 +82,10 @@ export interface ISkills {
     techMn: {
         icon: React.ComponentType,
         name: string
+    }[],
+    techDo: {
+        icon: React.ComponentType,
+        name: string
     }[]
 }
 
@@ -94,8 +98,8 @@ export interface IProjects {
         name: string;
     }[];
     image: string;
-    url: string;
-    github: string;
+    url?: string;
+    github?: string;
 }
 
 export interface ICarrouselProps {
