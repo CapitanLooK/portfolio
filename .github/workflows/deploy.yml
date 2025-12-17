@@ -37,7 +37,7 @@ jobs:
           username: ${{ secrets.HARBOR_USERNAME }}
           password: ${{ secrets.HARBOR_PASSWORD }}
 
-      # 5. Build y push para ARM64 (cambia 'platforms' para multiarch si querés)
+      # 5. Build y push para ARM64 con build arg para Next.js fonts
       - name: Build and push Docker image (ARM64)
         uses: docker/build-push-action@v5
         with:
@@ -45,6 +45,8 @@ jobs:
           push: true
           tags: privateregistry.404lab.site/portfolio/portfolio:${{ env.VERSION }}
           platforms: linux/arm64
+          build-args: |
+            NEXT_DISABLE_FONT_DOWNLOADS=1
 
       # 6. Checkout del repo de manifests (k8s-infra)
       - name: Checkout k8s-infra repo
