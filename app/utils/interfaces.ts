@@ -118,3 +118,7 @@ export interface IEmailData {
     email: string;
     message: string;
 }
+
+export interface testEmail {
+    email: string
+}
