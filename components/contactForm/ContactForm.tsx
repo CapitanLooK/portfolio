@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useEmailSender } from "@/app/utils/hooks/useEmailSender/useEmailSender"
+import swal from 'sweetalert'
 
 function ContactForm() {
 
