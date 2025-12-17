@@ -1,4 +1,4 @@
-name: Deploy to Server
+name: Build and Update Manifest (GitOps)
 
 on:
   push:
@@ -6,18 +6,56 @@ on:
       - main
 
 jobs:
-  deploy:
+  build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout code
+      # 1. Checkout del código fuente 'portfolio'
+      - name: Checkout portfolio code
         uses: actions/checkout@v4
 
-      - name: Start SSH agent and add private key
-        uses: webfactory/ssh-agent@v0.9.0
-        with:
-          ssh-private-key: ${{ secrets.SERVER_KEY }}
+      # 2. Generar version tag tipo YYMMDD-N (N=build diario)
+      - name: Generate short version tag
+        id: version
+        run: |
+          DATE=$(date +'%y%m%d')
+          COUNT=$(git rev-list --count --since="$DATE 00:00" HEAD)
+          BUILD=$(printf "%02d" $COUNT)
+          VERSION="$DATE-$BUILD"
+          echo "VERSION=$VERSION" >> $GITHUB_ENV
+          echo "Generated version: $VERSION"
 
-      - name: Deploy to Server via SSH
+      # 3. Build de la imagen Docker
+      - name: Build Docker image
+        run: |
+          docker build -t privateregistry.404lab.site/portfolio/portfolio:${{ env.VERSION }} .
+
+      # 4. Login a Harbor
+      - name: Login to Harbor
+        run: |
+          echo "${{ secrets.HARBOR_PASSWORD }}" | docker login privateregistry.404lab.site -u ${{ secrets.HARBOR_USERNAME }} --password-stdin
+
+      # 5. Push de la imagen a Harbor
+      - name: Push image to Harbor
+        run: |
+          docker push privateregistry.404lab.site/portfolio/portfolio:${{ env.VERSION }}
+
+      # 6. Checkout del repo de manifests (k8s-infra)
+      - name: Checkout k8s-infra repo
+        uses: actions/checkout@v4
+        with:
+          repository: CapitanLooK/k8s-infra
+          token: ${{ secrets.INFRA_REPO_TOKEN }}
+          path: k8s-infra
+
+      # 7. Actualizar el deployment.yaml con el nuevo tag
+      - name: Update image in deployment.yaml
+        run: |
+          cd k8s-infra/portfolio
+          sed -i "s|image: privateregistry.404lab.site/portfolio/portfolio:.*|image: privateregistry.404lab.site/portfolio/portfolio:${{ env.VERSION }}|" deployment.yaml
+
+      # 8. Commit y push al repo de manifests
+      - name: Commit and push to k8s-infra
         run: |
           ssh -o StrictHostKeyChecking=no ${{ secrets.SERVER_USER }}@${{ secrets.SERVER_IP }} << EOF
             cd /server/webserver/projects/portfolio
