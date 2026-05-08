@@ -17,8 +17,10 @@ import {
     SiSentry,
     SiKubernetes,
     SiHarbor,
-    SiHelm,
     SiLinux,
+    SiArgo,
+    SiPortainer,
+    SiProxmox
 } from "react-icons/si";
 import {
     FaGithub,
@@ -127,7 +129,7 @@ export const ResumeTabs: IResumeTabs[] = [
 
 export const aboutMe: IAboutMe = {
     title: "Sobre Mi",
-    description: "Soy desarrollador de software con mas de 3 años de experiencia. Me especializo en el desarrollo de aplicaciones web y móviles con diferentes tecnologías.",
+    description: "Ingeniero de Software Fullstack con más de 4 años de experiencia en el ecosistema JavaScript/TypeScript. Especializado en construir aplicaciones de punta a punta, combinando un backend robusto con Node.js y Nest.js y un frontend moderno y de alto rendimiento con React.js y Next.js. He trabajado en empresas líderes como Mercado Libre  y startups tecnológicas, aportando valor en la creación de soluciones integrales. Mi experiencia se complementa con una sólida base en DevOps y monitoreo (Docker, Kubernetes, Grafana, Datadog, New Relic, Prometheus, Kibana), asegurando la calidad y escalabilidad del software en todo su ciclo de vida."
 }
 
 
@@ -137,9 +139,14 @@ export const experience: IExperience = {
     description: '',
     items: [
         {
+            company: "COA S.A",
+            position: "Backend Developer",
+            duration: "2026 - Presente",
+        },
+        {
             company: "Oppers Global",
             position: "Software Engineer",
-            duration: "2024 - Presente",
+            duration: "2024 - 2026",
         },
         {
             company: "MercadoLibre SA",
@@ -154,7 +161,7 @@ export const experience: IExperience = {
         {
             company: "CoderHouse",
             position: "Tutor FE & BE",
-            duration: "2021 - Presente",
+            duration: "2021 - 2025",
         }
     ]
 }
@@ -277,13 +284,21 @@ export const skills: ISkills = {
             name: 'Docker'
         },
         {
-            icon: SiHelm,
-            name: 'Helm'
+            icon: SiArgo,
+            name: 'ArgoCD'
         },
         {
             icon: SiHarbor,
             name: 'Harbor'
-        }
+        },
+        {
+            icon: SiPortainer,
+            name: 'Portainer'
+        },
+        {
+            icon: SiProxmox,
+            name: 'Proxmox'
+        },
     ]
 }
 
