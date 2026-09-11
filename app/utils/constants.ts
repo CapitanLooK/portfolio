@@ -129,7 +129,7 @@ export const ResumeTabs: IResumeTabs[] = [
 
 export const aboutMe: IAboutMe = {
     title: "Sobre Mi",
-    description: "Ingeniero de Software Fullstack con más de 4 años de experiencia en el ecosistema JavaScript/TypeScript. Especializado en construir aplicaciones de punta a punta, combinando un backend robusto con Node.js y Nest.js y un frontend moderno y de alto rendimiento con React.js y Next.js. He trabajado en empresas líderes como Mercado Libre  y startups tecnológicas, aportando valor en la creación de soluciones integrales. Mi experiencia se complementa con una sólida base en DevOps y monitoreo (Docker, Kubernetes, Grafana, Datadog, New Relic, Prometheus, Kibana), asegurando la calidad y escalabilidad del software en todo su ciclo de vida."
+    description: "Ingeniero de Software Fullstack con más de 5 años de experiencia en el ecosistema JavaScript/TypeScript. Especializado en construir aplicaciones de punta a punta, combinando un backend robusto con Node.js y Nest.js y un frontend moderno y de alto rendimiento con React.js y Next.js. He trabajado en empresas líderes como Mercado Libre  y startups tecnológicas, aportando valor en la creación de soluciones integrales. Mi experiencia se complementa con una sólida base en DevOps y monitoreo (Docker, Kubernetes, Grafana, Datadog, New Relic, Prometheus, Kibana), asegurando la calidad y escalabilidad del software en todo su ciclo de vida."
 }
 
 
